@@ -82,6 +82,16 @@ services:
     depends_on:
       - kibana
 
+  web-front:
+    build:
+      context: web/front/
+      dockerfile: front.Dockerfile
+    ports:
+    - "8080:8080"
+    expose:
+      - "8080"
+    networks:
+      - elk
 
 networks:
   elk:
