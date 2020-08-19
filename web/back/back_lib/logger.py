@@ -24,7 +24,7 @@ werkzeug = logging.getLogger('werkzeug')
 '''
 web_logger_logstash = logging.getLogger('web_logger')
 web_logger_logstash.setLevel(logging.DEBUG)
-stash = logstash.TCPLogstashHandler('0.0.0.0',5001,version=1)
+stash = logstash.TCPLogstashHandler('logstash',5001,version=1)
 stash.setFormatter(formatter)
 web_logger_logstash.addHandler(stash)
 # web_logger_logstash.disabled = True
