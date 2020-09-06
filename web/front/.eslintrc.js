@@ -20,18 +20,16 @@ module.exports = {
                 useTabs: false,
                 tabWidth: 4,
                 trailingComma: 'all',
-                printWidth: 80,
+                printWidth: 300,
                 bracketSpacing: true,
                 arrowParens: 'avoid',
+                endOfLine: 'auto',
             },
         ],
     },
     overrides: [
         {
-            files: [
-                '**/__tests__/*.{j,t}s?(x)',
-                '**/tests/unit/**/*.spec.{j,t}s?(x)',
-            ],
+            files: ['**/__tests__/*.{j,t}s?(x)', '**/tests/unit/**/*.spec.{j,t}s?(x)'],
             env: {
                 jest: true,
             },
