@@ -93,6 +93,15 @@ services:
     networks:
       - elk
 
+  mongodb:
+      image: mongo
+      ports:
+          - "${MONGO_PORT}:27017"
+      volumes:
+          - "${PWD}/mongodb/data:/data/db"
+      env_file:
+          - .env
+
 networks:
   elk:
     driver: bridge
