@@ -915,3 +915,4 @@ test/
 
 ELK/elasticsearch/data/*
 .vscode
+mongodb
